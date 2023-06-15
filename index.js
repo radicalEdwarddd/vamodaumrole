@@ -11,6 +11,10 @@ app.use(
     })
 );
 
+app.get('/', async(req, res) => {
+    res.status(200).json({message: "running"})
+})
+
 app.post('/send-email', async(req, res) => {
     const message = {
         ClicouNoNao: req.body.ClicouNoNao,
